@@ -3,3 +3,6 @@
 <p><%= @task.priority %></p>
 <%= link_to "update", edit_task_path %>
 <%= link_to "delete", task_path(@task), method: :delete, data: { confirm: "are you sure?" } %>
+
+
+<!-- method: :delete above will specify which path it will take it to; task_path(@task) alone will only take you to the instance page (show.html.erb), but by specifying that its a delete request not a get request(which is the case with the show page), then it will know to go to the destroy page -->
